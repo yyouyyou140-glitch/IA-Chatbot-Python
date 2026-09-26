@@ -1,0 +1,27 @@
+import os
+
+# pip install requests
+# pip install openai
+# pip install python-dotenv
+#
+# Exemple de variables d'environnement :
+# OPENAI_API_KEY=votre_cle
+# OPENAI_MODEL=gpt-4o-mini
+# SERVER_URL=http://localhost:8000/chat
+# HISTORY_FILE=chat_history.json
+
+
+def get_history_file() -> str:
+    return os.getenv("HISTORY_FILE", "chat_history.json")
+
+
+def get_server_url() -> str:
+    return os.getenv("SERVER_URL", "")
+
+
+def get_openai_key() -> str:
+    return os.getenv("OPENAI_API_KEY", "")
+
+
+def get_openai_model() -> str:
+    return os.getenv("OPENAI_MODEL", "gpt-4o-mini")
